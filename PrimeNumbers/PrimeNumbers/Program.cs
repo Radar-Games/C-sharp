@@ -5,41 +5,38 @@ namespace PrimeNumbers
 {
 	class MainClass
 	{
-		static void Main(string[] args)
+		static void Main (string[] args)
 		{
-            MainClass v = new MainClass();
-            v.Calculations(int.Parse(Console.ReadLine()));
+            while (true)
+            {
+                MainClass v = new MainClass();
+                v.Calculations(int.Parse(Console.ReadLine()));
+            }
 		}
 
-        void Calculations(int z)
+        void Calculations (int z)
         {
-            int pCount = 0;
-            int desired = z;
-            int i = 2;
+            int a = z;
+            bool isPrime = true;
 
-            while (desired > pCount)
+            for (int i = 2; i < a / 2; i++)
             {
-                i++;
-
-                bool isPrime = true;
-
-                for (int a = 2; a <= i / 2; a++)
+                if (a % i == 0)
                 {
-                    if (i % a == 0)
-                    {
-                        isPrime = false;
-                        return;
-                    }
-
-                }
-                if(isPrime)
-                {
-                    Console.WriteLine(i);
-                    pCount += 1;
+                    isPrime = false;
+                    break;
                 }
             }
 
-            Console.ReadLine();
+            if (isPrime == true)
+            {
+                Console.WriteLine("Number is aprime");
+            }
+
+            if (isPrime == false)
+            {
+                Console.WriteLine("Number is not prime");
+            }
 		}
     }
 }
