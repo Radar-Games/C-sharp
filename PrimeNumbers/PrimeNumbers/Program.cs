@@ -1,5 +1,7 @@
-﻿
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace PrimeNumbers
 {
@@ -7,36 +9,29 @@ namespace PrimeNumbers
 	{
 		static void Main (string[] args)
 		{
-            while (true)
-            {
-                MainClass v = new MainClass();
-                v.Calculations(int.Parse(Console.ReadLine()));
-            }
-		}
+			bool isPrime = true;
 
-        void Calculations (int z)
-        {
-            int a = z;
-            bool isPrime = true;
+            Console.WriteLine("Prime Numbers: ");
 
-            for (int i = 2; i < a / 2; i++)
+            for (int j = 2; j <= 100; j++)
             {
-                if (a % i == 0)
+                for (int i = 2; i <= 100; i++)
                 {
-                    isPrime = false;
-                    break;
+                    if (j != i && j % i == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
                 }
-            }
+                if (isPrime)
+                {
+                    Console.WriteLine(j);
+                    Console.ReadKey();
+				}
+				isPrime = true;
+			}
 
-            if (isPrime == true)
-            {
-                Console.WriteLine("Number is aprime");
-            }
-
-            if (isPrime == false)
-            {
-                Console.WriteLine("Number is not prime");
-            }
-		}
+			Console.ReadKey();
+        }
     }
 }
