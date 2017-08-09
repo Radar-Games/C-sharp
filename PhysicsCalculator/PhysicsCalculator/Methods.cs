@@ -21,49 +21,56 @@ namespace PhysicsCalculator
 			Console.WriteLine("The Linear Displacment is {0} m", tDisplacement);
 		}
 
-		public static void AverageVelocityUsingDisplacement()
-		{
-			double x1, x2, t1, t2, xDiff, tDiff, avVel;
+        public static void AverageVelocity()
+        {
+            Console.WriteLine("What are you using?");
+            Console.WriteLine("Velocity or Displacement");
+            string choice = Console.ReadLine();
 
-			Console.WriteLine("Inital Displacement of the Object");
-			x1 = double.Parse(Console.ReadLine());
+            if (choice == "Displacement")
+            {
+                double x1, x2, t1, t2, xDiff, tDiff, avVel;
 
-			Console.WriteLine("Final Displacement of the Object");
-			x2 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Inital Displacement of the Object");
+                x1 = double.Parse(Console.ReadLine());
 
-			Console.WriteLine("Initial Time");
-			t1 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Final Displacement of the Object");
+                x2 = double.Parse(Console.ReadLine());
 
-			Console.WriteLine("Final Time");
-			t2 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Initial Time");
+                t1 = double.Parse(Console.ReadLine());
 
-			xDiff = x2 - x1;
-			tDiff = t2 - t1;
+                Console.WriteLine("Final Time");
+                t2 = double.Parse(Console.ReadLine());
 
-			avVel = xDiff / tDiff;
+                xDiff = x2 - x1;
+                tDiff = t2 - t1;
 
-			Console.WriteLine("The Average Velocity is {0} m/s", avVel);
-		}
+                avVel = xDiff / tDiff;
 
-		public static void AverageVelocityUsingVelocity()
-		{
-			double u, v, t, velDiff, avVel;
+                Console.WriteLine("The Average Velocity is {0} m/s", avVel);
+            }
 
-			Console.WriteLine("Initial Velocity of Object");
-			u = double.Parse(Console.ReadLine());
+            if (choice == "Velocity")
+            {
+                double u, v, t, velDiff, avVel;
 
-			Console.WriteLine("Final Velocity of Object");
-			v = double.Parse(Console.ReadLine());
+                Console.WriteLine("Initial Velocity of Object");
+                u = double.Parse(Console.ReadLine());
 
-			Console.WriteLine("Time Taken");
-			t = double.Parse(Console.ReadLine());
+                Console.WriteLine("Final Velocity of Object");
+                v = double.Parse(Console.ReadLine());
 
-			velDiff = v - u;
+                Console.WriteLine("Time Taken");
+                t = double.Parse(Console.ReadLine());
 
-			avVel = velDiff / t;
+                velDiff = v - u;
 
-			Console.WriteLine("The Average Velocity is {0} m/s", avVel);
-		}
+                avVel = velDiff / t;
+
+                Console.WriteLine("The Average Velocity is {0} m/s", avVel);
+            }
+        }
 
 		public static void InstantaneousVelocity()
 		{
@@ -80,43 +87,50 @@ namespace PhysicsCalculator
 			Console.WriteLine("Instantaneous Velocity of Object at Specified point is {0} m/s", InstantaneousVelocity);
 		}
 
-        public static void AccelarationUsingChange()
+        public static void Accelaration()
         {
-            double dv, dt, accelaration;
+            Console.WriteLine("What are you using");
+            Console.WriteLine("Difference or Base");
+            string choice = Console.ReadLine();
 
-            Console.WriteLine("Change in Velocity");
-            dv = double.Parse(Console.ReadLine());
+            if (choice == "Difference")
+            {
+                double dv, dt, accelaration;
 
-            Console.WriteLine("Change in Time");
-            dt = double.Parse(Console.ReadLine());
+                Console.WriteLine("Change in Velocity");
+                dv = double.Parse(Console.ReadLine());
 
-            accelaration = dv / dt;
+                Console.WriteLine("Change in Time");
+                dt = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("The Accelaration of the Object is {0} m/s/s", accelaration);
-        }
+                accelaration = dv / dt;
 
-        public static void AccelarationUsingBase()
-        {
-            double v1, v2, t1, t2, tDiff, vDiff, accelaration;
+                Console.WriteLine("The Accelaration of the Object is {0} m/s/s", accelaration);
+            }
 
-            Console.WriteLine("Initial Velocity");
-            v1 = double.Parse(Console.ReadLine());
+            if (choice == "Base")
+            {
+                double v1, v2, t1, t2, tDiff, vDiff, accelaration;
 
-            Console.WriteLine("Final Velocity");
-            v2 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Initial Velocity");
+                v1 = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Initial Time");
-            t1 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Final Velocity");
+                v2 = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Final Time");
-            t2 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Initial Time");
+                t1 = double.Parse(Console.ReadLine());
 
-            vDiff = v2 - v1;
-            tDiff = t2 - t1;
+                Console.WriteLine("Final Time");
+                t2 = double.Parse(Console.ReadLine());
 
-            accelaration = vDiff / tDiff;
+                vDiff = v2 - v1;
+                tDiff = t2 - t1;
 
-            Console.WriteLine("The Acclaration of the Object is {0} m/s/s", accelaration);
+                accelaration = vDiff / tDiff;
+
+                Console.WriteLine("The Acclaration of the Object is {0} m/s/s", accelaration);
+            }
         }
 
         // Force
