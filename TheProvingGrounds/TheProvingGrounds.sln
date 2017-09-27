@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheProvingGrounds", "TheProvingGrounds\TheProvingGrounds.csproj", "{C05B98B0-5C4C-4D19-A905-EB7D9973B980}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C05B98B0-5C4C-4D19-A905-EB7D9973B980}.Debug|x86.ActiveCfg = Debug|x86
+		{C05B98B0-5C4C-4D19-A905-EB7D9973B980}.Debug|x86.Build.0 = Debug|x86
+		{C05B98B0-5C4C-4D19-A905-EB7D9973B980}.Release|x86.ActiveCfg = Release|x86
+		{C05B98B0-5C4C-4D19-A905-EB7D9973B980}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
